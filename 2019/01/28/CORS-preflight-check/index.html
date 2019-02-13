@@ -96,25 +96,25 @@
 
 
 
-  <meta name="description" content="This is my first blog posted thru Hexo.I will write down something (ideas, working notes, thoughts, experiments, etc) and publish/track here.  The blog was built using Hexo with theme called Next (Tha">
-<meta name="keywords" content="Hexo">
+  <meta name="description" content="Starting Point:When working on AMP and related Subscribe to Google (SwG) projects, we dealt with CORS a bit and encountered one concept called “CORS preflight check”. It is required in amp-subscriptio">
+<meta name="keywords" content="CORS,AMP,SwG">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Start noting down thru Hexo">
-<meta property="og:url" content="https://ronnywang9.github.io/2019/01/18/Start-noting-down-thru-Hexo/index.html">
+<meta property="og:title" content="CORS preflight check">
+<meta property="og:url" content="https://ronnywang9.github.io/2019/01/28/CORS-preflight-check/index.html">
 <meta property="og:site_name" content="Ronny&#39;s Notebook">
-<meta property="og:description" content="This is my first blog posted thru Hexo.I will write down something (ideas, working notes, thoughts, experiments, etc) and publish/track here.  The blog was built using Hexo with theme called Next (Tha">
+<meta property="og:description" content="Starting Point:When working on AMP and related Subscribe to Google (SwG) projects, we dealt with CORS a bit and encountered one concept called “CORS preflight check”. It is required in amp-subscriptio">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-22T15:28:03.000Z">
+<meta property="og:updated_time" content="2019-02-08T20:04:32.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Start noting down thru Hexo">
-<meta name="twitter:description" content="This is my first blog posted thru Hexo.I will write down something (ideas, working notes, thoughts, experiments, etc) and publish/track here.  The blog was built using Hexo with theme called Next (Tha">
+<meta name="twitter:title" content="CORS preflight check">
+<meta name="twitter:description" content="Starting Point:When working on AMP and related Subscribe to Google (SwG) projects, we dealt with CORS a bit and encountered one concept called “CORS preflight check”. It is required in amp-subscriptio">
 
 
 
 
 
 
-  <link rel="canonical" href="https://ronnywang9.github.io/2019/01/18/Start-noting-down-thru-Hexo/">
+  <link rel="canonical" href="https://ronnywang9.github.io/2019/01/28/CORS-preflight-check/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>Start noting down thru Hexo | Ronny's Notebook</title>
+  <title>CORS preflight check | Ronny's Notebook</title>
   
 
 
@@ -340,7 +340,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ronnywang9.github.io/2019/01/18/Start-noting-down-thru-Hexo/">
+    <link itemprop="mainEntityOfPage" href="https://ronnywang9.github.io/2019/01/28/CORS-preflight-check/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhe Wang">
@@ -357,7 +357,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Start noting down thru Hexo
+          <h1 class="post-title" itemprop="name headline">CORS preflight check
 
               
             
@@ -383,7 +383,7 @@
                 
               
 
-              <time title="Created: 2019-01-18 15:31:10" itemprop="dateCreated datePublished" datetime="2019-01-18T15:31:10-05:00">2019-01-18</time>
+              <time title="Created: 2019-01-28 17:26:38" itemprop="dateCreated datePublished" datetime="2019-01-28T17:26:38-05:00">2019-01-28</time>
             
 
             
@@ -400,11 +400,29 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-01-22 10:28:03" itemprop="dateModified" datetime="2019-01-22T10:28:03-05:00">2019-01-22</time>
+                <time title="Modified: 2019-02-08 15:04:32" itemprop="dateModified" datetime="2019-02-08T15:04:32-05:00">2019-02-08</time>
               
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Project-Notes/" itemprop="url" rel="index"><span itemprop="name">Project Notes</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -418,8 +436,8 @@
                 </span>
             
                 <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/01/18/Start-noting-down-thru-Hexo/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/01/18/Start-noting-down-thru-Hexo/" itemprop="commentCount"></span>
+                <a href="/2019/01/28/CORS-preflight-check/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/01/28/CORS-preflight-check/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -447,18 +465,54 @@
       
 
       
-        <p>This is my first blog posted thru Hexo.<br>I will write down something (ideas, working notes, thoughts, experiments, etc) and publish/track here. </p>
-<p>The blog was built using Hexo with theme called Next (Thanks <a href="https://notes.iissnan.com/2015/something-about-next/" target="_blank" rel="noopener">IIssNan</a> creating this beautiful blog them)</p>
-<h2 id="Starting-from-Hexo"><a href="#Starting-from-Hexo" class="headerlink" title="Starting from Hexo"></a>Starting from Hexo</h2><p><a href="https://hexo.io/docs/" target="_blank" rel="noopener">Hexo Docs</a></p>
-<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-<h2 id="Using-Next-as-the-blog-theme"><a href="#Using-Next-as-the-blog-theme" class="headerlink" title="Using Next as the blog theme"></a>Using Next as the blog theme</h2><p>More info: <a href="https://github.com/iissnan/theme-next-docs" target="_blank" rel="noopener">Next Theme Docs</a><br>And <a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">Next Official Site</a></p>
+        <h2 id="Starting-Point"><a href="#Starting-Point" class="headerlink" title="Starting Point:"></a>Starting Point:</h2><p>When working on AMP and related Subscribe to Google (SwG) projects, we dealt with CORS a bit and encountered one concept called “CORS preflight check”. It is required in amp-subscriptions <strong><em>Pingback</em></strong> endpoint which set the JSON object as <code>Content-type: text/plain</code>. This is intentional as it removes the need for a CORS preflight check.</p>
+<h2 id="CORS-Intro"><a href="#CORS-Intro" class="headerlink" title="CORS Intro:"></a>CORS Intro:</h2><p>CORS or Cross-Origin Resource Sharing is a way for server to check if requests coming in are allowed if they’re coming from a different origin. Meaning, if web application <code>xyz.com</code> makes a request to <code>abc.com</code>, using either <code>XMLHttpRequest</code> or <code>fetch</code> API, CORS will use HTTP headers to tell the application if <code>xyz.com</code> has the right permission to access <code>abc.com</code>. The permissions need to be configured at <code>abc.com</code>, where you specify what methods and from what origins can come through.</p>
+<p>By default, for security, both <code>XMLHttpRequest</code> and <code>fetch</code> follow <code>same-origin</code> policy so if you haven’t specifically configured CORS and the HTTP headers on your back-end, the requests from different domain will fail.</p>
+<h2 id="What-is-a-CORS-preflight-request"><a href="#What-is-a-CORS-preflight-request" class="headerlink" title="What is a CORS preflight request?"></a>What is a CORS preflight request?</h2><p>When it comes to preflight, we can divide requests into two categories: <em>simple requests</em> and <em>preflighted requests</em>.</p>
+<h3 id="Simple-Requests"><a href="#Simple-Requests" class="headerlink" title="Simple Requests:"></a>Simple Requests:</h3><p>Some requests don’t trigger a preflight check. There is a simple exchange of CORS headers between client and server to check the permissions. For request to be simple, it needs to meet several criterias:</p>
+<ul>
+<li>The allowed methods are<ul>
+<li>GET</li>
+<li>POST</li>
+<li>HEAD</li>
+</ul>
+</li>
+<li>The only headers that are allowed: <ul>
+<li>Accept</li>
+<li>Accept-Language</li>
+<li>Content-Language</li>
+<li>Content-Type (but note the additional requirements below)</li>
+<li>Last-Event-ID</li>
+<li>DPR</li>
+<li>Save-Data</li>
+<li>Viewport-Width</li>
+<li>Width</li>
+</ul>
+</li>
+<li>There are only three values allowed for <code>Content-Type</code> header for simple requests:<ul>
+<li>application/x-www-form-urlencoded</li>
+<li>multipart/form-data</li>
+<li>text/plain</li>
+</ul>
+</li>
+<li>No event listeners are registered on any <code>XMLHttpRequestUpload</code> object used in the request; these are accessed using the <code>XMLHttpRequest.upload</code> property.</li>
+<li>No <code>ReadableStream</code> object is used in the request.</li>
+</ul>
+<h3 id="Preflight-Requests"><a href="#Preflight-Requests" class="headerlink" title="Preflight Requests:"></a>Preflight Requests:</h3><p>Now, if the request doesn’t meet the criteria above, the browser automatically sends a HTTP request <em>before</em> the original one by <code>OPTIONS</code> method to check whether it is safe to send the original request. Most common cases happen if requests have <code>DELETE</code>, <code>PUT</code> or any other methods that can amend data, any headers that are not <a href="https://fetch.spec.whatwg.org/#cors-safelisted-request-header" target="_blank" rel="noopener">CORS-safelisted</a> (listed above) or <code>Content-Type</code> of, let’s say <code>application/json</code>.</p>
+<p>So, let’s say we send a <code>DELETE</code> request to the server. The browser sends <code>OPTIONS</code> request with headers containing info about the <code>DELETE</code> request we made.</p>
+<figure class="highlight http"><figcaption><span>request</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">OPTIONS /users/:id </span><br><span class="line"><span class="attribute">Access-Control-Request-Method</span>: DELETE </span><br><span class="line"><span class="attribute">Access-Control-Request-Headers</span>: origin, x-requested-with</span><br><span class="line"><span class="attribute">Origin</span>: https://example.com</span><br></pre></td></tr></table></figure>
+<p>The server then makes a check and if it allows the request, it responds with status code <code>200</code> OK.</p>
+<figure class="highlight http"><figcaption><span>request</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">HTTP/1.1 <span class="number">200</span> OK</span><br><span class="line"><span class="attribute">Content-Length</span>: 0</span><br><span class="line"><span class="attribute">Connection</span>: keep-alive</span><br><span class="line"><span class="attribute">Access-Control-Allow-Origin</span>: *</span><br><span class="line"><span class="attribute">Access-Control-Allow-Methods</span>: POST, GET, OPTIONS, DELETE</span><br></pre></td></tr></table></figure>
+<p>After this check, the browser will send the original <code>DELETE</code> request we made in the first place.</p>
+<h3 id="Deal-with-it"><a href="#Deal-with-it" class="headerlink" title="Deal with it:"></a>Deal with it:</h3><p>The easiest option would be to to avoid the preflight request by making sure the request falls into the <code>simple</code> category. Go through your settings and headers and remove or change any complex headers that aren’t needed.</p>
+<p>However, this doesn’t solve all cases. For example if the request is authenticated and sending <code>Authorization</code> header with tokens by <code>PUT</code> or <code>DELETE</code> methods, it can not just be simply put in above <code>simple</code> category. In this case, deal with <code>OPTIONS</code> handling following the document, like, using <a href="https://www.npmjs.com/package/cors#enabling-cors-pre-flight" target="_blank" rel="noopener">cors npm package</a> that enables CORS.</p>
+<h2 id="More-with-my-references"><a href="#More-with-my-references" class="headerlink" title="More with my references:"></a>More with my references:</h2><ol>
+<li>MDN’s articles on <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS" target="_blank" rel="noopener">CORS</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/OPTIONS" target="_blank" rel="noopener">OPTIONS</a></li>
+<li><a href="https://damon.ghost.io/killing-cors-preflight-requests-on-a-react-spa/" target="_blank" rel="noopener">Good example that trying to eliminate preflight</a></li>
+<li><a href="https://www.npmjs.com/package/cors#enabling-cors-pre-flight" target="_blank" rel="noopener">npm CORS</a></li>
+<li><a href="https://github.com/ampproject/amphtml/blob/master/spec/amp-cors-requests.md" target="_blank" rel="noopener">CORS request in AMP</a></li>
+<li><a href="https://github.com/ampproject/amphtml/blob/master/extensions/amp-subscriptions/amp-subscriptions.md" target="_blank" rel="noopener">AMP subscriptions</a>   </li>
+</ol>
 
       
     </div>
@@ -482,7 +536,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+            <a href="/tags/CORS/" rel="tag"># CORS</a>
+          
+            <a href="/tags/AMP/" rel="tag"># AMP</a>
+          
+            <a href="/tags/SwG/" rel="tag"># SwG</a>
           
         </div>
       
@@ -495,15 +553,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/01/23/Deal-with-XFFs/" rel="next" title="Deal with XFFs">
+                <i class="fa fa-chevron-left"></i> Deal with XFFs
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/22/GCP-API-management-thru-ESP-service/" rel="prev" title="GCP API management thru ESP service">
-                GCP API management thru ESP service <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -719,7 +777,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Starting-from-Hexo"><span class="nav-number">1.</span> <span class="nav-text">Starting from Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Using-Next-as-the-blog-theme"><span class="nav-number">2.</span> <span class="nav-text">Using Next as the blog theme</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Starting-Point"><span class="nav-number">1.</span> <span class="nav-text">Starting Point:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CORS-Intro"><span class="nav-number">2.</span> <span class="nav-text">CORS Intro:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What-is-a-CORS-preflight-request"><span class="nav-number">3.</span> <span class="nav-text">What is a CORS preflight request?</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Simple-Requests"><span class="nav-number">3.1.</span> <span class="nav-text">Simple Requests:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Preflight-Requests"><span class="nav-number">3.2.</span> <span class="nav-text">Preflight Requests:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deal-with-it"><span class="nav-number">3.3.</span> <span class="nav-text">Deal with it:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#More-with-my-references"><span class="nav-number">4.</span> <span class="nav-text">More with my references:</span></a></li></ol></div>
             
 
           </div>
@@ -871,9 +929,9 @@
 
 <script>
   var disqus_config = function() {
-    this.page.url = "https://ronnywang9.github.io/2019/01/18/Start-noting-down-thru-Hexo/";
-    this.page.identifier = "2019/01/18/Start-noting-down-thru-Hexo/";
-    this.page.title = 'Start noting down thru Hexo';
+    this.page.url = "https://ronnywang9.github.io/2019/01/28/CORS-preflight-check/";
+    this.page.identifier = "2019/01/28/CORS-preflight-check/";
+    this.page.title = 'CORS preflight check';
     };
   function loadComments() {
     var d = document, s = d.createElement('script');
