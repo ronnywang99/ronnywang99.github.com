@@ -339,6 +339,338 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ronnywang99.github.io/2019/02/14/GKE-ESP-project-summary/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhe Wang">
+      <meta itemprop="description" content="不积跬步，无以至千里">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ronny's Notebook">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/02/14/GKE-ESP-project-summary/" class="post-title-link" itemprop="url">GKE-ESP-project-summary</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-02-14 09:41:37" itemprop="dateCreated datePublished" datetime="2019-02-14T09:41:37-05:00">2019-02-14</time>
+            
+
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ronnywang99.github.io/2019/02/14/CORS-reseach-following/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhe Wang">
+      <meta itemprop="description" content="不积跬步，无以至千里">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ronny's Notebook">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/02/14/CORS-reseach-following/" class="post-title-link" itemprop="url">CORS-reseach-following</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-02-14 09:22:33 / Modified: 11:33:46" itemprop="dateCreated datePublished" datetime="2019-02-14T09:22:33-05:00">2019-02-14</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Project-Notes/" itemprop="url" rel="index"><span itemprop="name">Project Notes</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Things-that-covered-in-this-post"><a href="#Things-that-covered-in-this-post" class="headerlink" title="Things that covered in this post:"></a>Things that covered in this post:</h2><ol>
+<li>GKE Configuring ESP to allow CORS requests;</li>
+<li>CORS wildcard support in different browser.</li>
+</ol>
+<h2 id="Details"><a href="#Details" class="headerlink" title="Details:"></a>Details:</h2><h3 id="1-allowCors-in-x-google-endpoints"><a href="#1-allowCors-in-x-google-endpoints" class="headerlink" title="1. allowCors in x-google-endpoints:"></a>1. allowCors in x-google-endpoints:</h3><h4 id="What-Why"><a href="#What-Why" class="headerlink" title="What/Why:"></a>What/Why:</h4><p>CORS (Cross-origin resource sharing) is a standard mechanism that allows XMLHttpRequest (XHR) calls executed in a web page to interact with resources from different origins. Without CORS, the <code>same-origin policy</code> that is enforced by all browsers will prevent cross-origin requests.</p>
+<p>For GKE project, you can start from the <a href="https://cloud.google.com/endpoints/docs/openapi/specify-proxy-startup-options" target="_blank" rel="noopener">ESP Startup Options</a>, or following the <a href="https://cloud.google.com/endpoints/docs/openapi/openapi-extensions#configuring_dns_on_the_cloudgoog_domain" target="_blank" rel="noopener">Google OpenAPI extentions</a> to setup. </p>
+<h4 id="How"><a href="#How" class="headerlink" title="How:"></a>How:</h4><p>We were using the latter one to setup and to enable ESP to allow CORS request, so to implement our customized CORS support in our backend codes, we set <code>allowCors: true</code> so that ESP passes all CORS request through to backend. </p>
+<p>Like below: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x-google-endpoints:</span><br><span class="line">- name: &quot;API_NAME.endpoints.PROJECT_ID.cloud.goog&quot;</span><br><span class="line">  allowCors: True</span><br></pre></td></tr></table></figure>
+<p>After that deploy to make it working. </p>
+<h3 id="2-CORS-wildcard-is-supported-differently-in-different-browsers"><a href="#2-CORS-wildcard-is-supported-differently-in-different-browsers" class="headerlink" title="2. CORS wildcard * is supported differently in different browsers:"></a>2. CORS wildcard * is supported differently in different browsers:</h3><h4 id="What"><a href="#What" class="headerlink" title="What:"></a>What:</h4><p>We had below configurations in <code>Access-Control-Allow-Headers</code> in our codes: </p>
+<pre><code>corsRequests.Header().Set(&quot;Access-Control-Allow-Headers&quot;, &quot;DNT, X-CustomHeader, &quot; +
+    &quot;Keep-Alive, User-Agent, X-Requested-With, If-Modified-Since, Cache-Control, Content-Type, Cookie, Accept, *&quot;)
+</code></pre><p>Please note the wildcard <code>*</code> at the last place. </p>
+<p>Recently we had a new header needs to be supported in the CORS request headers, let’s call it <code>x-new-header</code>. This field was not explicitly added in above headers list as we assume the wildcard <code>*</code> could cover it. </p>
+<p>After the setup in consumer web app, it works well in Chrome browser during smoke checking. While we found it not supported well in Firefox and Safari browsers, which are shown as below: </p>
+<p>Error shows in Firefox console:<br><img src="/images/CORS-reseach-following-firefox.png" alt="firefox"><br>Error shows in Safari console:<br><img src="/images/CORS-reseach-following-safari.png" alt="safari"></p>
+<h4 id="Why"><a href="#Why" class="headerlink" title="Why:"></a>Why:</h4><p>In Mozilla developer doc, we found below info: </p>
+<blockquote>
+<p>When responding to a credentialed request, the server must specify an origin in the value of the Access-Control-Allow-Origin header, instead of specifying the “*” wildcard.</p>
+</blockquote>
+<h4 id="How-1"><a href="#How-1" class="headerlink" title="How:"></a>How:</h4><p>It works after the <code>x-new-header</code> was explicitly added in the <code>Access-Control-Allow-Headers</code> settings.</p>
+<h2 id="References"><a href="#References" class="headerlink" title="References:"></a>References:</h2><ol>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy" target="_blank" rel="noopener">Same-origin policy</a></li>
+<li><a href="https://cloud.google.com/endpoints/docs/openapi/specify-proxy-startup-options" target="_blank" rel="noopener">GCP ESP Startup Options</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS" target="_blank" rel="noopener">Mozilla CORS Developer Doc</a></li>
+<li><a href="https://cloud.google.com/endpoints/docs/openapi/how-to" target="_blank" rel="noopener">How-to Guides for deploying API on GCP</a></li>
+<li><a href="https://cloud.google.com/endpoints/docs/openapi/openapi-extensions#configuring_to_allow_cors_requests" target="_blank" rel="noopener">GCP Configure ESP to allow CORS</a></li>
+<li>StackOverflow: </li>
+</ol>
+<ul>
+<li><a href="https://stackoverflow.com/questions/13146892/cors-access-control-allow-headers-wildcard-being-ignored" target="_blank" rel="noopener">Cors Access-Control-Allow-Headers wildcard being ignored?</a></li>
+<li><a href="https://stackoverflow.com/questions/19743396/cors-cannot-use-wildcard-in-access-control-allow-origin-when-credentials-flag-i" target="_blank" rel="noopener">CORS: Cannot use wildcard in Access-Control-Allow-Origin when credentials flag is true</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ronnywang99.github.io/2019/01/28/CORS-preflight-check/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1358,7 +1690,7 @@ ERROR:Fetching rollouts failed (status code 403, reason Forbidden, url https://s
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1414,7 +1746,13 @@ ERROR:Fetching rollouts failed (status code 403, reason Forbidden, url https://s
                     
                       
                     
-                    <span class="site-state-item-count">14</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">17</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>

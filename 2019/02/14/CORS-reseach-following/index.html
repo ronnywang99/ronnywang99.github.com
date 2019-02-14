@@ -96,25 +96,28 @@
 
 
 
-  <meta name="description" content="Problem Description:When I worked on sed command on MacOS that modifying a file, I got below error in one try:1sed: 1: &amp;quot;./&amp;lt;file_name&amp;gt;&amp;quot;: invalid command code . The command I used is:1se">
-<meta name="keywords" content="sed,linux">
+  <meta name="description" content="Things that covered in this post: GKE Configuring ESP to allow CORS requests; CORS wildcard support in different browser.  Details:1. allowCors in x-google-endpoints:What/Why:CORS (Cross-origin resour">
+<meta name="keywords" content="CORS,ESP,allow_cors,YAML,browser">
 <meta property="og:type" content="article">
-<meta property="og:title" content="sed command on MacOS">
-<meta property="og:url" content="https://ronnywang99.github.io/2019/01/22/SED-command-on-MacOS/index.html">
+<meta property="og:title" content="CORS-reseach-following">
+<meta property="og:url" content="https://ronnywang99.github.io/2019/02/14/CORS-reseach-following/index.html">
 <meta property="og:site_name" content="Ronny&#39;s Notebook">
-<meta property="og:description" content="Problem Description:When I worked on sed command on MacOS that modifying a file, I got below error in one try:1sed: 1: &amp;quot;./&amp;lt;file_name&amp;gt;&amp;quot;: invalid command code . The command I used is:1se">
+<meta property="og:description" content="Things that covered in this post: GKE Configuring ESP to allow CORS requests; CORS wildcard support in different browser.  Details:1. allowCors in x-google-endpoints:What/Why:CORS (Cross-origin resour">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-08T20:04:32.000Z">
+<meta property="og:image" content="https://ronnywang99.github.io/images/CORS-reseach-following-firefox.png">
+<meta property="og:image" content="https://ronnywang99.github.io/images/CORS-reseach-following-safari.png">
+<meta property="og:updated_time" content="2019-02-14T16:33:46.072Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sed command on MacOS">
-<meta name="twitter:description" content="Problem Description:When I worked on sed command on MacOS that modifying a file, I got below error in one try:1sed: 1: &amp;quot;./&amp;lt;file_name&amp;gt;&amp;quot;: invalid command code . The command I used is:1se">
+<meta name="twitter:title" content="CORS-reseach-following">
+<meta name="twitter:description" content="Things that covered in this post: GKE Configuring ESP to allow CORS requests; CORS wildcard support in different browser.  Details:1. allowCors in x-google-endpoints:What/Why:CORS (Cross-origin resour">
+<meta name="twitter:image" content="https://ronnywang99.github.io/images/CORS-reseach-following-firefox.png">
 
 
 
 
 
 
-  <link rel="canonical" href="https://ronnywang99.github.io/2019/01/22/SED-command-on-MacOS/">
+  <link rel="canonical" href="https://ronnywang99.github.io/2019/02/14/CORS-reseach-following/">
 
 
 
@@ -124,7 +127,7 @@
   };
 </script>
 
-  <title>sed command on MacOS | Ronny's Notebook</title>
+  <title>CORS-reseach-following | Ronny's Notebook</title>
   
 
 
@@ -340,7 +343,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ronnywang99.github.io/2019/01/22/SED-command-on-MacOS/">
+    <link itemprop="mainEntityOfPage" href="https://ronnywang99.github.io/2019/02/14/CORS-reseach-following/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhe Wang">
@@ -357,7 +360,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">sed command on MacOS
+          <h1 class="post-title" itemprop="name headline">CORS-reseach-following
 
               
             
@@ -383,24 +386,12 @@
                 
               
 
-              <time title="Created: 2019-01-22 15:27:16" itemprop="dateCreated datePublished" datetime="2019-01-22T15:27:16-05:00">2019-01-22</time>
+              <time title="Created: 2019-02-14 09:22:33 / Modified: 11:33:46" itemprop="dateCreated datePublished" datetime="2019-02-14T09:22:33-05:00">2019-02-14</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-02-08 15:04:32" itemprop="dateModified" datetime="2019-02-08T15:04:32-05:00">2019-02-08</time>
               
             
           </span>
@@ -452,41 +443,39 @@
       
 
       
-        <h2 id="Problem-Description"><a href="#Problem-Description" class="headerlink" title="Problem Description:"></a>Problem Description:</h2><p>When I worked on <em>sed</em> command on MacOS that modifying a file, I got below error in one try:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed: 1: &quot;./&lt;file_name&gt;&quot;: invalid command code .</span><br></pre></td></tr></table></figure></p>
-<p>The command I used is:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -i &apos;/&lt;!-- BlaBlaBla --&gt;/ r ./&lt;file1_name.xml&gt;&apos; ./&lt;file2_name.xml&gt;</span><br></pre></td></tr></table></figure></p>
-<p>Here I have <em>-i</em> as an <em>sed</em> command option.</p>
-<h2 id="Researches"><a href="#Researches" class="headerlink" title="Researches:"></a>Researches:</h2><p>The problem only occurred on my MacOS local environment, while this piece of command was copied from one line of codes, which actually works well on our Linux OS server.</p>
-<p>Based on research and learning, I recognized that: </p>
+        <h2 id="Things-that-covered-in-this-post"><a href="#Things-that-covered-in-this-post" class="headerlink" title="Things that covered in this post:"></a>Things that covered in this post:</h2><ol>
+<li>GKE Configuring ESP to allow CORS requests;</li>
+<li>CORS wildcard support in different browser.</li>
+</ol>
+<h2 id="Details"><a href="#Details" class="headerlink" title="Details:"></a>Details:</h2><h3 id="1-allowCors-in-x-google-endpoints"><a href="#1-allowCors-in-x-google-endpoints" class="headerlink" title="1. allowCors in x-google-endpoints:"></a>1. allowCors in x-google-endpoints:</h3><h4 id="What-Why"><a href="#What-Why" class="headerlink" title="What/Why:"></a>What/Why:</h4><p>CORS (Cross-origin resource sharing) is a standard mechanism that allows XMLHttpRequest (XHR) calls executed in a web page to interact with resources from different origins. Without CORS, the <code>same-origin policy</code> that is enforced by all browsers will prevent cross-origin requests.</p>
+<p>For GKE project, you can start from the <a href="https://cloud.google.com/endpoints/docs/openapi/specify-proxy-startup-options" target="_blank" rel="noopener">ESP Startup Options</a>, or following the <a href="https://cloud.google.com/endpoints/docs/openapi/openapi-extensions#configuring_dns_on_the_cloudgoog_domain" target="_blank" rel="noopener">Google OpenAPI extentions</a> to setup. </p>
+<h4 id="How"><a href="#How" class="headerlink" title="How:"></a>How:</h4><p>We were using the latter one to setup and to enable ESP to allow CORS request, so to implement our customized CORS support in our backend codes, we set <code>allowCors: true</code> so that ESP passes all CORS request through to backend. </p>
+<p>Like below: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x-google-endpoints:</span><br><span class="line">- name: &quot;API_NAME.endpoints.PROJECT_ID.cloud.goog&quot;</span><br><span class="line">  allowCors: True</span><br></pre></td></tr></table></figure>
+<p>After that deploy to make it working. </p>
+<h3 id="2-CORS-wildcard-is-supported-differently-in-different-browsers"><a href="#2-CORS-wildcard-is-supported-differently-in-different-browsers" class="headerlink" title="2. CORS wildcard * is supported differently in different browsers:"></a>2. CORS wildcard * is supported differently in different browsers:</h3><h4 id="What"><a href="#What" class="headerlink" title="What:"></a>What:</h4><p>We had below configurations in <code>Access-Control-Allow-Headers</code> in our codes: </p>
+<pre><code>corsRequests.Header().Set(&quot;Access-Control-Allow-Headers&quot;, &quot;DNT, X-CustomHeader, &quot; +
+    &quot;Keep-Alive, User-Agent, X-Requested-With, If-Modified-Since, Cache-Control, Content-Type, Cookie, Accept, *&quot;)
+</code></pre><p>Please note the wildcard <code>*</code> at the last place. </p>
+<p>Recently we had a new header needs to be supported in the CORS request headers, let’s call it <code>x-new-header</code>. This field was not explicitly added in above headers list as we assume the wildcard <code>*</code> could cover it. </p>
+<p>After the setup in consumer web app, it works well in Chrome browser during smoke checking. While we found it not supported well in Firefox and Safari browsers, which are shown as below: </p>
+<p>Error shows in Firefox console:<br><img src="/images/CORS-reseach-following-firefox.png" alt="firefox"><br>Error shows in Safari console:<br><img src="/images/CORS-reseach-following-safari.png" alt="safari"></p>
+<h4 id="Why"><a href="#Why" class="headerlink" title="Why:"></a>Why:</h4><p>In Mozilla developer doc, we found below info: </p>
 <blockquote>
-<p>“The behavior of shell utilities does differ in minor ways between unix variants. There are many unix variants, with a <a href="https://unix.stackexchange.com/questions/3196/evolution-of-operating-systems-from-unix/3202#3202" target="_blank" rel="noopener">complex history</a>. There are standardisation efforts such as the <a href="https://unix.stackexchange.com/questions/11983/what-exactly-is-posix" target="_blank" rel="noopener">POSIX</a> standard and its superset the <a href="https://www.wikiwand.com/en/Single_UNIX_Specification" target="_blank" rel="noopener">Single UNIX specification</a>. Most systems nowadays implement POSIX:2001, also known as the Single UNIX Specification version 3, with minor deviations and many extensions. The Single Unix specification is not a tutorial, but version 3 is readable if you already have an idea of what a command is doing. You can consult it to know if some feature is standard or an extension of a particular system.</p>
+<p>When responding to a credentialed request, the server must specify an origin in the value of the Access-Control-Allow-Origin header, instead of specifying the “*” wildcard.</p>
 </blockquote>
-<blockquote>
-<p>A majority of unix users use Linux and haven’t used any other variant. Linux comes with <a href="https://www.wikiwand.com/en/GNU" target="_blank" rel="noopener">GNU</a> utilities, which often have many extensions to the standard. So you’ll find quite a lot of code out there that works on Linux but not on other unixes, because it relies on those extensions.</p>
-</blockquote>
-<blockquote>
-<p>Regarding sed, consult the sed Single Unix specification for the minimum that every system is supposed to support, the man page on your system for what your implementation supports, and the <a href="http://www.gnu.org/software/sed/manual/sed.html" target="_blank" rel="noopener">GNU sed manual</a> for what most people out there use.”</p>
-</blockquote>
-<p>and</p>
-<blockquote>
-<p>“OS X currently comes with a FreeBSD sed from 2005. Most of the differences below also apply to other BSD sed versions.</p>
-</blockquote>
-<blockquote>
-<p>OS X’s sed uses <code>-E</code> for ERE and GNU sed uses <code>-r</code>. <code>-E</code> is an alias for <code>-r</code> in GNU sed (added in 4.2, not documented until 4.3). Newer versions of FreeBSD and NetBSD sed support both <code>-E</code> and <code>-r</code>. OpenBSD sed only supports <code>-E</code>.</p>
-</blockquote>
-<blockquote>
-<p><code>-i &#39;&#39;</code> works with OS X’s sed but not GNU sed. <code>-i</code> works with GNU sed, recent versions of NetBSD, OpenBSD sed, but not OS X’s sed. <code>-i -e</code> works with both but in the case of FreeBSD sed makes a backup of the original file with <code>-e</code> appended to the file name (and you need to pass no more than one expression to sed).”</p>
-</blockquote>
-<h2 id="How-to-Fix"><a href="#How-to-Fix" class="headerlink" title="How to Fix:"></a>How to Fix:</h2><p>The way I made my command running properly on MacOS is: </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -i &apos;&apos; -e &apos;/&lt;!-- BlaBlaBla --&gt;/ r ./&lt;file1_name.xml&gt;&apos; ./&lt;file2_name.xml&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="How-1"><a href="#How-1" class="headerlink" title="How:"></a>How:</h4><p>It works after the <code>x-new-header</code> was explicitly added in the <code>Access-Control-Allow-Headers</code> settings.</p>
 <h2 id="References"><a href="#References" class="headerlink" title="References:"></a>References:</h2><ol>
-<li><a href="https://confluence.qps.nl/fledermaus/questions-answers/other/differences-in-end-of-line-characters-mac-windows-and-linux" target="_blank" rel="noopener">Differences in end of line characters on Mac, Windows and Linux</a></li>
-<li><a href="https://unix.stackexchange.com/questions/13711/differences-between-sed-on-mac-osx-and-other-standard-sed" target="_blank" rel="noopener">Differences between sed on Mac OSX and other “standard” sed?</a></li>
-<li>StackOverflow:</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy" target="_blank" rel="noopener">Same-origin policy</a></li>
+<li><a href="https://cloud.google.com/endpoints/docs/openapi/specify-proxy-startup-options" target="_blank" rel="noopener">GCP ESP Startup Options</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS" target="_blank" rel="noopener">Mozilla CORS Developer Doc</a></li>
+<li><a href="https://cloud.google.com/endpoints/docs/openapi/how-to" target="_blank" rel="noopener">How-to Guides for deploying API on GCP</a></li>
+<li><a href="https://cloud.google.com/endpoints/docs/openapi/openapi-extensions#configuring_to_allow_cors_requests" target="_blank" rel="noopener">GCP Configure ESP to allow CORS</a></li>
+<li>StackOverflow: </li>
 </ol>
 <ul>
-<li><a href="https://stackoverflow.com/questions/19456518/invalid-command-code-despite-escaping-periods-using-sed" target="_blank" rel="noopener">https://stackoverflow.com/questions/19456518/invalid-command-code-despite-escaping-periods-using-sed</a></li>
-<li><a href="https://stackoverflow.com/questions/7573368/in-place-edits-with-sed-on-os-x" target="_blank" rel="noopener">https://stackoverflow.com/questions/7573368/in-place-edits-with-sed-on-os-x</a></li>
-<li><a href="https://stackoverflow.com/questions/4247068/sed-command-with-i-option-failing-on-mac-but-works-on-linux" target="_blank" rel="noopener">https://stackoverflow.com/questions/4247068/sed-command-with-i-option-failing-on-mac-but-works-on-linux</a> </li>
+<li><a href="https://stackoverflow.com/questions/13146892/cors-access-control-allow-headers-wildcard-being-ignored" target="_blank" rel="noopener">Cors Access-Control-Allow-Headers wildcard being ignored?</a></li>
+<li><a href="https://stackoverflow.com/questions/19743396/cors-cannot-use-wildcard-in-access-control-allow-origin-when-credentials-flag-i" target="_blank" rel="noopener">CORS: Cannot use wildcard in Access-Control-Allow-Origin when credentials flag is true</a></li>
 </ul>
 
       
@@ -511,9 +500,15 @@
       
         <div class="post-tags">
           
-            <a href="/tags/sed/" rel="tag"># sed</a>
+            <a href="/tags/CORS/" rel="tag"># CORS</a>
           
-            <a href="/tags/linux/" rel="tag"># linux</a>
+            <a href="/tags/ESP/" rel="tag"># ESP</a>
+          
+            <a href="/tags/allow-cors/" rel="tag"># allow_cors</a>
+          
+            <a href="/tags/YAML/" rel="tag"># YAML</a>
+          
+            <a href="/tags/browser/" rel="tag"># browser</a>
           
         </div>
       
@@ -526,16 +521,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/23/Deal-with-XFFs/" rel="prev" title="Deal with XFFs">
-                <i class="fa fa-chevron-left"></i> Deal with XFFs
+              <a href="/2019/02/14/GKE-ESP-project-summary/" rel="prev" title="GKE-ESP-project-summary">
+                <i class="fa fa-chevron-left"></i> GKE-ESP-project-summary
               </a>
             
           </div>
           <span class="post-nav-divider"></span>
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/01/22/GCP-API-management-thru-ESP-service/" rel="next" title="GCP API management thru ESP service">
-                GCP API management thru ESP service <i class="fa fa-chevron-right"></i>
+              <a href="/2019/01/28/CORS-preflight-check/" rel="next" title="CORS preflight check">
+                CORS preflight check <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -737,7 +732,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem-Description"><span class="nav-number">1.</span> <span class="nav-text">Problem Description:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Researches"><span class="nav-number">2.</span> <span class="nav-text">Researches:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-to-Fix"><span class="nav-number">3.</span> <span class="nav-text">How to Fix:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#References"><span class="nav-number">4.</span> <span class="nav-text">References:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Things-that-covered-in-this-post"><span class="nav-number">1.</span> <span class="nav-text">Things that covered in this post:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Details"><span class="nav-number">2.</span> <span class="nav-text">Details:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-allowCors-in-x-google-endpoints"><span class="nav-number">2.1.</span> <span class="nav-text">1. allowCors in x-google-endpoints:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#What-Why"><span class="nav-number">2.1.1.</span> <span class="nav-text">What/Why:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#How"><span class="nav-number">2.1.2.</span> <span class="nav-text">How:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-CORS-wildcard-is-supported-differently-in-different-browsers"><span class="nav-number">2.2.</span> <span class="nav-text">2. CORS wildcard * is supported differently in different browsers:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#What"><span class="nav-number">2.2.1.</span> <span class="nav-text">What:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Why"><span class="nav-number">2.2.2.</span> <span class="nav-text">Why:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#How-1"><span class="nav-number">2.2.3.</span> <span class="nav-text">How:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#References"><span class="nav-number">3.</span> <span class="nav-text">References:</span></a></li></ol></div>
             
 
           </div>
